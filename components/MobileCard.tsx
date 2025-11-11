@@ -33,7 +33,7 @@ export const MobileCard: React.FC<MobileCardProps> = ({ onClose, placeholderSuff
 
 
 	return (
-		<div className="rounded-xl bg-[#d3bd92] text-[100903] p-2 sm:p-4 shadow ">
+		<div className="rounded-xl bg-[#d3bd92] text-[100903] p-2 sm:p-4 shadow mt-4">
 			<div className="flex items-center justify-between">
 				<div className="flex flex-col md:flex-row md:items-center">
 					<span className="font-semibold">Mobile {placeholderSuffix ?? ""} :</span>
