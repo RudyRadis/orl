@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
+@layer base {
+	h1 {
+            font-family: var(--font-anton);
+		color: #FF7900;
+      }
+
+      h2, h3, h4, h5, h6 {
+            /* font-family: var(--font-fraunces); */
+		 font-family: var(--font-anton);
+      }
+
+	h2 {
+		margin-bottom: 32px;
+	}
+      
+      body {
+            font-family: var(--font-nunito-sans);
+            background: var(--background);
+            color: var(--foreground);
+      }
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #100903;
+		--foreground: #EAE0CC;
+	}
+
+	
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.mainCard {
+	width: 100%;
+	background: var(--color-foreground);
+	color: var(--color-background);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 32px;
+	border-radius: 16px;
+}
+
+/* Pour Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Pour Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
